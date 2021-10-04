@@ -21,5 +21,9 @@ public class userRegistrationProblem {
         System.out.println("Enter your Mobile Number : ");
         String mobileNumber= sc.nextLine();
         System.out.println(Pattern.matches("(91\\s)?[789][0-9]{9}$",mobileNumber));
+
+        System.out.println("Enter your Password : ");
+        String password= sc.nextLine();
+        System.out.println(Pattern.matches("[a-zA-Z]{8,}",password));
     }
 }
