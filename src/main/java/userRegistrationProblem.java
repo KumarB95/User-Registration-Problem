@@ -16,7 +16,7 @@ public class userRegistrationProblem {
 
         System.out.println("Enter your Email ID : ");
         String email= sc.nextLine();
-        System.out.println(Pattern.matches("[a-zA-Z0-9_\\-.]+[@][a-z]+[\\.][a-z]{2,3}",email));
+        System.out.println(Pattern.matches("^([a][b][c])([\\.][a-z]+)?[@][b][l][\\.][c][o]([\\.][i][n])?",email));
 
         System.out.println("Enter your Mobile Number : ");
         String mobileNumber= sc.nextLine();
