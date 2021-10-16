@@ -1,3 +1,5 @@
+package com.bridgelabz;
+import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -25,5 +27,20 @@ public class userRegistrationProblem {
         System.out.println("Enter your Password : ");
         String password= sc.nextLine();
         System.out.println(Pattern.matches("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$",password));
+
+        String[] validEmail={"abc@yahoo.com","abc-100@yahoo.com","abc.100@yahoo.com",
+                "abc111@abc.com","abc-100@abc.net","abc.100@abc.com.au","abc@1.com","abc@gmail.com.com","abc+100@gmail.com"};
+        String[] invalidEmail={"abc","abc@.com.my","abc123@gmail.a","abc123@.com","abc123@.com.com",".abc@abc.com",
+                "abc()*@gmail.com","abc@%*.com","abc..2002@gmail.com","abc.@gmail.com",
+                "abc@abc@gmail.com","abc@gmail.com.1a","abc@gmail.com.aa.au"};
+
+        for (String value : validEmail) {
+            System.out.println(value);
+            System.out.println(Pattern.matches("^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", value));
+        }
+        for (String s : invalidEmail) {
+            System.out.println(s);
+            System.out.println(Pattern.matches("^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", s));
+        }
     }
 }
